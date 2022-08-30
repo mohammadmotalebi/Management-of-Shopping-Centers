@@ -28,7 +28,7 @@ export default (props) => {
         id: 'io.loyalty.app',
         name: 'Loyalty',
         theme: 'auto', // Automatic theme detection
-        version: '1.11',
+        version: '1.0.0906',
         home: '/',
         rtl: true,
         iosTouchRipple: true,

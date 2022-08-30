@@ -1,8 +1,9 @@
 {
-    "name": "loyalty",
+    "name": "ekaseb",
     "private": true,
-    "version": "1.0.0",
-    "description": "Loyalty",
+    "version": "1.0.0906",
+    "description": "ekaseb.com",
+
     "license": "UNLICENSED",
     "scripts": {
         "dev": "npm run development",
@@ -122,5 +123,5 @@
         "typescript": "^4.7.4"
     },
     "keywords": [],
-    "author": ""
+    "author": "Mohammad Motalebi"
 }

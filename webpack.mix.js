@@ -33,7 +33,7 @@ mix.scripts(
         "public/js/others.js",
         "resources/Components",
     ],
-    "public/js/all.js"
+    "public/finally/js/all.js"
 );
 mix.styles(
     [
@@ -48,13 +48,13 @@ mix.styles(
         "public/js/md_datepicker/jquery.md.bootstrap.datetimepicker.style.css",
         "public/css/jquery-confirm.min.css",
     ],
-    "public/css/all.css"
+    "public/finally/css/all.css"
 );
 
 
-mix.js("resources/js/index.jsx", "public/js/app.js").react()
-.ts("resources/admin/index.tsx", "public/js/admin.js")
-.css("resources/admin/style.module.css", "public/css/admin.css")
-.sass("resources/sass/app.scss", "public/css/app.css")
+mix.js("resources/js/index.jsx", "public/finally/js/app.js").react()
+.ts("resources/admin/index.tsx", "public/finally/js/admin.js")
+.css("resources/admin/style.module.css", "public/finally/css/admin.css")
+.sass("resources/sass/app.scss", "public/finally/css/app.css")
 .browserSync("http://localhost:8000/")
-.disableNotifications();
+.disableNotifications().version()

@@ -1,9 +1,9 @@
 @if (mobileApp())
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('finally/js/app.js') }}"></script>
 @endif
 
 @unless(mobileApp())
-    <script src="{{asset('js/all.js')}}"></script>
+    <script src="{{asset('finally/js/all.js')}}"></script>
     @stack('scripts')
 @endunless
 
