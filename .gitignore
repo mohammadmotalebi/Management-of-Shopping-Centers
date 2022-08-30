@@ -44,3 +44,4 @@ www/
 /dist/
 /well-known/
 /.idea/
+/nbproject/*
