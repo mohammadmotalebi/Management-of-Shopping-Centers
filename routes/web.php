@@ -591,6 +591,16 @@ Route::get('pas', function () {
 Route::get('php', function () {
     phpinfo();
 });
+
+
+Route::get('en', function () {
+    $json = json_encode(['a' => 'testA']);
+    return base64_encode($json);
+});
+Route::get('de', function () {
+
+    return base64_decode('eyJhIjoidGVzdEEifQ==');
+});
 Route::post('login-modal', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::get('csrf-token', function () {
     return csrf_token();

@@ -51,7 +51,6 @@ mix.styles(
     "public/finally/css/all.css"
 );
 
-
 mix.js("resources/js/index.jsx", "public/finally/js/app.js").react()
 .ts("resources/admin/index.tsx", "public/finally/js/admin.js")
 .css("resources/admin/style.module.css", "public/finally/css/admin.css")
