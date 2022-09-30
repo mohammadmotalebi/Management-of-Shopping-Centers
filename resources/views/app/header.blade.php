@@ -15,11 +15,15 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
     @endif
     <!-- Custom fonts for this template-->
-
+    <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 716px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/img/1136x640.png"
+    />
     <meta name="apple-mobile-web-app-title" content="اتوماسیون فروشگاهی">
     @endmobile
 
-
+    <link rel="icon" href="{{ url('favicon.ico?v=2') }}">
     <title>@yield('title')</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     @handheld

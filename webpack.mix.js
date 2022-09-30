@@ -16,7 +16,7 @@ mix.scripts(
         "public/js/store.js",
         "public/js/jquery.min.js",
         "public/js/popper.min.js",
-        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "public/select2/js/select2.full.min.js",
         "node_modules/@fortawesome/fontawesome-free/js/all.js",
         "public/js/mask.js",
@@ -50,7 +50,6 @@ mix.styles(
     ],
     "public/finally/css/all.css"
 );
-
 
 mix.js("resources/js/index.jsx", "public/finally/js/app.js").react()
 .ts("resources/admin/index.tsx", "public/finally/js/admin.js")
