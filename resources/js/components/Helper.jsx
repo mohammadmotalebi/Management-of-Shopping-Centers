@@ -26,11 +26,15 @@ export const number = (num) => {
 export const inputNumber = (e) => {
     let n = parseInt(e.target.value.replaceAll(/,/g, ""));
     if (!isNaN(n) || n < 1) {
-        e.target.value = new Intl.NumberFormat().format(n);
+        e.target.value = n.toLocaleString('fa-IR')
     } else {
         e.target.value = "";
     }
 };
+function separateComma(val) {
+    let num = {...val}
+
+}
 export const ConvertStringToHTML = function (str) {
     let parser = new DOMParser();
     let doc = parser.parseFromString(str, "text/html");
