@@ -2,7 +2,6 @@ import {
     Block,
     Button,
     f7,
-    Fab,
     Icon,
     Link,
     List,
@@ -14,19 +13,12 @@ import {
     NavTitle,
     Page,
     Popup,
-    Row,
     useStore,
 } from "framework7-react";
 import fa from "../lang/fa";
-import { inputNumber, postData, number } from "../Helper";
-import React, {
-    useCallback,
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-} from "react";
-import { Dom7 as $$, request, getDevice } from "framework7";
+import { inputNumber, postData } from "../Helper";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Dom7 as $$, getDevice } from "framework7";
 import store from "../store/store";
 
 export default ({ itemProps, edit }) => {
@@ -36,7 +28,7 @@ export default ({ itemProps, edit }) => {
     const [formDataState, setFormDataState] = useState({});
     const [navbar, setNavbar] = useState();
     const price = useRef("");
-    const [priceString, setPriceString] = useState({price : ""});
+    const [priceString, setPriceString] = useState({ price: "" });
     const loading = useStore("loading");
     const dv = getDevice();
     let notificationOk = f7.notification.create({
@@ -302,8 +294,6 @@ export default ({ itemProps, edit }) => {
             });
     };
 
-
-
     return (
         <Popup
             className={edit ? "edit-item" : "add-item"}
@@ -349,13 +339,13 @@ export default ({ itemProps, edit }) => {
                         name={"item_price"}
                         inputId={"item_price"}
                         id={"item_price_li"}
-                        pattern="[0-9]*"
+                        pattern="[0-9]+"
                         required
                         defaultValue={formDataState.price}
                         clearButton
                         style={{ marginBottom: "-13px" }}
                         onChange={(e) => {
-                            inputNumber(e)
+                            inputNumber(e);
                             setFormDataState({
                                 ...formDataState,
                                 price: e.target.value,

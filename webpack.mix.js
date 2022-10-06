@@ -9,20 +9,19 @@ const mix = require("laravel-mix");
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+mix.webpackConfig({ stats: { children: true } });
 
 mix.scripts(
     [
         "public/js/store.js",
-        "public/js/jquery.min.js",
-        "public/js/popper.min.js",
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/popper.js/dist/popper.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "public/select2/js/select2.full.min.js",
         "node_modules/@fortawesome/fontawesome-free/js/all.js",
         "public/js/mask.js",
         "public/js/sb-admin-2.js",
         "public/chart/Chart.min.js",
-        "public/noty/noty.min.js",
         "public/js/jquery-confirm.min.js",
         "node_modules/bootstrap-table/dist/bootstrap-table.min.js",
         "node_modules/bootstrap-table/dist/locale/bootstrap-table-fa-IR.min.js",
@@ -51,9 +50,11 @@ mix.styles(
     "public/finally/css/all.css"
 );
 
-mix.js("resources/js/index.jsx", "public/finally/js/app.js").react()
-.ts("resources/admin/index.tsx", "public/finally/js/admin.js")
-.css("resources/admin/style.module.css", "public/finally/css/admin.css")
-.sass("resources/sass/app.scss", "public/finally/css/app.css")
-.browserSync("http://localhost:8000/")
-.disableNotifications().version()
+mix.js("resources/js/index.jsx", "public/finally/js/app.js")
+    .react()
+    // .ts("resources/admin/index.tsx", "public/finally/js/admin.js")
+    // .css("resources/admin/style.module.css", "public/finally/css/admin.css")
+    .sass("resources/sass/app.scss", "public/finally/css/app.css")
+    .browserSync("http://localhost:8000/")
+    .disableNotifications()
+    .version();
